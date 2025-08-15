@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "source_path": "/workspace/tmp.txt",
+  "destination_path": "/workspace/tmp.img",
+  "chunk_size": 4096,
+  "copied_bytes": 11,
+  "duration_seconds": 0.0016567707061767578,
+  "hashes": {
+    "sha256": "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9",
+    "blake2b": "021ced8799296ceca557832ab941a50b4a11f83478cf141f51f933f653ab9fbcc05a037cddbed06e309bf334942c4e58cdf1a46e237911ccd7fcf9787cbc7fd0",
+    "sha1": "2aae6c35c94fcfb415dbe95f408b9ce91ee846ed",
+    "md5": "5eb63bbbe01eeed093cb22bb8f5acdc3"
+  },
+  "chunk_hashes_sha256": [
+    "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"
+  ],
+  "started_at": "2025-08-15T18:38:00.853313+00:00",
+  "ended_at": "2025-08-15T18:38:00.855007+00:00"
+}

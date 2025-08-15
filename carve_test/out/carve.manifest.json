@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source_path": "/workspace/carve_test/sample.bin",
+  "items": [
+    {
+      "index": 1,
+      "type": "jpeg",
+      "offset_start": 0,
+      "offset_end": 18,
+      "bytes": 18,
+      "path": "/workspace/carve_test/out/000001.jpg"
+    }
+  ]
+}

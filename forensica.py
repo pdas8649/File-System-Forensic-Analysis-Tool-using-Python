@@ -771,7 +771,27 @@ def parse_size(size_str: str) -> int:
 	return int(float(s))
 
 
+def _sanitize_ipython_argv(argv: List[str]) -> List[str]:
+	cleaned: List[str] = []
+	skip_next = False
+	for i, a in enumerate(argv):
+		if skip_next:
+			skip_next = False
+			continue
+		# Jupyter/IPython often passes '-f <kernel.json>' or just the kernel json
+		if a == "-f" and i + 1 < len(argv):
+			skip_next = True
+			continue
+		if a.lower().endswith(".json") and ("kernel" in a.lower() or "jupyter" in a.lower()):
+			continue
+		cleaned.append(a)
+	return cleaned
+
+
 def main(argv: Optional[List[str]] = None) -> int:
+	if argv is None:
+		argv = sys.argv[1:]
+	argv = _sanitize_ipython_argv(argv)
 	parser = build_parser()
 	args = parser.parse_args(argv)
 
